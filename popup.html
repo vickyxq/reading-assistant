@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>沉浸式阅读助手</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="popup-container">
+    <!-- 头部 -->
+    <header class="popup-header">
+      <div class="logo">
+        <span class="logo-icon">📖</span>
+        <h1 class="logo-text">阅读助手</h1>
+      </div>
+      <div class="status-indicator" id="statusIndicator">
+        <span class="status-dot"></span>
+        <span class="status-text">未激活</span>
+      </div>
+    </header>
+
+    <!-- 主要控制区域 -->
+    <main class="popup-main">
+      <!-- 阅读模式切换 -->
+      <section class="control-section">
+        <div class="toggle-container">
+          <button class="toggle-btn" id="toggleReadingMode">
+            <span class="toggle-icon">📖</span>
+            <span class="toggle-text">启用阅读模式</span>
+          </button>
+        </div>
+      </section>
+
+      <!-- 主题设置 -->
+      <section class="control-section">
+        <h3 class="section-title">主题模式</h3>
+        <div class="theme-options">
+          <button class="theme-btn" data-theme="light">
+            <span class="theme-icon">☀️</span>
+            <span class="theme-name">明亮</span>
+          </button>
+          <button class="theme-btn" data-theme="dark">
+            <span class="theme-icon">🌙</span>
+            <span class="theme-name">暗黑</span>
+          </button>
+          <button class="theme-btn" data-theme="sepia">
+            <span class="theme-icon">🟤</span>
+            <span class="theme-name">护眼</span>
+          </button>
+        </div>
+      </section>
+
+      <!-- 字体设置 -->
+      <section class="control-section">
+        <h3 class="section-title">字体大小</h3>
+        <div class="font-size-container">
+          <button class="font-btn" data-size="small">小</button>
+          <button class="font-btn" data-size="medium">中</button>
+          <button class="font-btn" data-size="large">大</button>
+          <button class="font-btn" data-size="xlarge">特大</button>
+        </div>
+      </section>
+
+      <!-- 行间距设置 -->
+      <section class="control-section">
+        <h3 class="section-title">行间距</h3>
+        <div class="line-spacing-container">
+          <button class="spacing-btn" data-spacing="compact">紧凑</button>
+          <button class="spacing-btn" data-spacing="normal">标准</button>
+          <button class="spacing-btn" data-spacing="loose">宽松</button>
+        </div>
+      </section>
+
+      <!-- 快捷操作 -->
+      <section class="control-section">
+        <h3 class="section-title">快捷操作</h3>
+        <div class="quick-actions">
+          <button class="action-btn" id="extractContent">
+            <span class="action-icon">📄</span>
+            <span class="action-text">提取正文</span>
+          </button>
+          <button class="action-btn" id="removeAds">
+            <span class="action-icon">🚫</span>
+            <span class="action-text">移除广告</span>
+          </button>
+          <button class="action-btn" id="focusMode">
+            <span class="action-icon">🎯</span>
+            <span class="action-text">专注模式</span>
+          </button>
+        </div>
+      </section>
+
+      <!-- 设置选项 -->
+      <section class="control-section">
+        <h3 class="section-title">设置</h3>
+        <div class="settings-options">
+          <label class="setting-item">
+            <input type="checkbox" id="autoActivate">
+            <span class="checkmark"></span>
+            <span class="setting-text">自动激活阅读模式</span>
+          </label>
+          <label class="setting-item">
+            <input type="checkbox" id="showProgress">
+            <span class="checkmark"></span>
+            <span class="setting-text">显示阅读进度</span>
+          </label>
+          <label class="setting-item">
+            <input type="checkbox" id="enableShortcuts">
+            <span class="checkmark"></span>
+            <span class="setting-text">启用键盘快捷键</span>
+          </label>
+        </div>
+      </section>
+    </main>
+
+    <!-- 底部信息 -->
+    <footer class="popup-footer">
+      <div class="shortcut-info">
+        <span class="shortcut-text">快捷键: Ctrl+Shift+R</span>
+      </div>
+      <div class="version-info">
+        <span class="version-text">v1.0.0</span>
+      </div>
+    </footer>
+  </div>
+
+  <!-- 加载指示器 -->
+  <div class="loading-overlay" id="loadingOverlay">
+    <div class="loading-spinner"></div>
+    <div class="loading-text">加载中...</div>
+  </div>
+
+  <!-- 提示消息 -->
+  <div class="toast" id="toast">
+    <span class="toast-message"></span>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
