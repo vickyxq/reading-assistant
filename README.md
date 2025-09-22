@@ -118,7 +118,7 @@ reading_assistant/
 - **本地存储**: 设置数据仅存储在用户设备上
 - **无数据收集**: 不收集任何用户浏览数据
 - **开源透明**: 所有代码公开可审查
-- **完整隐私政策**: [查看详细隐私政策](https://yourusername.github.io/reading-assistant/privacy-policy.html)
+- **完整隐私政策**: [查看详细隐私政策](https://vickyxq.github.io/reading-assistant/privacy-policy.html)
 
 ## 🐛 问题反馈
 

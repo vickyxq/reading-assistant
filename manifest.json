@@ -61,6 +61,6 @@
     "extension_pages": "script-src 'self'; object-src 'self'"
   },
   
-  "homepage_url": "https://github.com/yourusername/reading-assistant",
-  "privacy_policy": "https://yourusername.github.io/reading-assistant/privacy-policy.html"
+  "homepage_url": "https://github.com/vickyxq/reading-assistant",
+  "privacy_policy": "https://vickyxq.github.io/reading-assistant/privacy-policy.html"
 }
